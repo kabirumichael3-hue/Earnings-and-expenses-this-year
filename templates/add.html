@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="card">
+    <div class="card-header">Add Transaction</div>
+    <div class="card-body">
+      <form method="post" action="{{ url_for('add') }}">
+        <div class="mb-3">
+          <label class="form-label">Amount</label>
+          <input name="amount" class="form-control" placeholder="e.g. 250.00" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Direction</label>
+          <select name="direction" class="form-select">
+            <option value="expense" selected>Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <input name="category" class="form-control" placeholder="Food, Salary, Transport...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Account</label>
+          <input name="account" class="form-control" placeholder="Cash, Wallet, Bank...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <input name="description" class="form-control" placeholder="Optional description">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tags</label>
+          <input name="tags" class="form-control" placeholder="comma, separated, tags">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date (ISO 8601)</label>
+          <input name="date" class="form-control" placeholder="Leave blank for now">
+        </div>
+        <button class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
