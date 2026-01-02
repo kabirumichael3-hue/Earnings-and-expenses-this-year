@@ -1,0 +1,2 @@
+id,date,amount,direction,category,account,description,tags
+# (The script creates this header automatically if the file is missing.)
