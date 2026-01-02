@@ -3,3 +3,4 @@ __pycache__/
 *.pyo
 .env
 transactions-export.csv
+transactions.db
